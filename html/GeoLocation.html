@@ -16,17 +16,27 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script src="js/modernizr.custom.js"></script>
-<title>Page Title</title>
+	<script src="/js/searchbox.js"></script>
+	<style>
+      #map {
+        height: 50%;
+        width: 40%;
+        margin:auto;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      h1{text-align: center;}
+     </style>
 </head>
-
-
 
 <body>
 
  <div class="row">
     <div class="col-sm-12">
     	<img class="logo" src="../image/logo.png" width="100px" height="80px">
-
     	 <form action="" class="search-form">
                 <div class="form-group has-feedback">
             		<label for="search" class="sr-only">Search</label>
@@ -36,8 +46,8 @@
           </form>
     </div>
 </div>
-<nav class="cl-effect-1">
-	<ul class="nav justify-content-center">
+<nav margin="auto" class="cl-effect-1">
+	<ul class="nav justify-content-initial">
 		<li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
 		<li class="dropdown">
 		    <a href="javascript:void(0)" class="dropbtn">Healthy Living</a>
@@ -50,83 +60,54 @@
 		<li class="nav-item"><a class="nav-link" href="addReview.html">Add Restaurant</a></li>
 		<li class="nav-item"><a class="nav-link" href="http://localhost:3000/">Chat Room</a></li>
 		<li class="nav-item"><a class="nav-link" href="Geolocation.html">GeoLocation</a></li>
+		
+
 	</ul>
 </nav>
+<h1>Restaurants Near Your Location</h1>
+    <div id="map"></div>
+    <script>
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 15
+        });
 
+        infoWindow = new google.maps.InfoWindow;
 
-<script>
-function scorePage(){
-	window.open("score.html", "_self");
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
 
-}
-	
-</script>
-<div >
-			<div id="center">
-			<h3 style="text-decoration: none";>How healthy are you?</h3>
-			<h3 style="text-decoration: none";>Take this test to find out!</h3>
-			</div>
-				<div style="text-align:left">
-				<form method="post" id="myForm" action="score.html">
-				<label id="Q1" class ="border container">
-				<h3 id="q1">1. How often do you exercise?</h4></br>
-				<fieldset class="form-group">					
-				<input type="radio"> Once a day</br>
-				<input type="radio"> Once a week</br>
-				<input type="radio"> Once a month</br>
-				<input type="radio"> Never</br>				
-					
-				</fieldset></label>
-				
-				</div>
-				<div style="text-align:left">
-				<form method="post" id="myForm">
-				<label id="Q1" class ="border container">
-				<h3 id="q1">2. How often do you eat out?</h4></br>
-				<fieldset class="form-group">					
-				<input type="radio"> Once a day</br>
-				<input type="radio"> Once a week</br>
-				<input type="radio"> Once a month</br>
-				<input type="radio"> Never</br>				
-					
-				</fieldset></label>
-				
-				</div>
-				<div style="text-align:left">
-				<form method="post" id="myForm">
-				<label id="Q1" class ="border container">
-				<h3 id="q1">3. How often do you eat fruits?</h4></br>
-				<fieldset class="form-group">					
-				<input type="radio"> Once a day</br>
-				<input type="radio"> Once a week</br>
-				<input type="radio"> Once a month</br>
-				<input type="radio"> Never</br>				
-					
-				</fieldset></label>
-				
-				</div>
-				<div style="text-align:left">
-				<form method="post" id="myForm">
-				<label id="Q1" class ="border container">
-				<h3 id="q1">4. How often do you stay up late at night?</h4></br>
-				<fieldset class="form-group">					
-				<input type="radio"> Everyday</br>
-				<input type="radio"> Once a week</br>
-				<input type="radio"> Once a month</br>
-				<input type="radio"> Never</br>				
-					
-				</fieldset></label>
-				
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Your Location');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
 
-			</form>
-			</div>
-				<div id="center">
-				<button onclick="scorePage()" id="submit">Submit</button>
-				<button>Reset</button>	
-		</div>
-
-
-
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDarMyM9LIxpNXzL01uqCYVwn8eF0rwOEE&callback=initMap">
+    </script>
 
 <footer id="myFooter">
 
@@ -150,10 +131,6 @@ function scorePage(){
     
     </div>	
 	</footer>
-
-
-
-
 
 </body>
 </html>
