@@ -1,0 +1,237 @@
+/*************************NavBar*************************/
+.navbar-default {
+    border-color: rgba(35,35,35,.05);
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    background-color: white;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+}
+
+.navbar-header > .navbar-brand {
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    color: black;
+    padding: 15px;
+    -webkit-transition: padding .2s ease-in;
+    -moz-transition: padding .2s ease-in;
+    transition: padding .2s ease-in;
+}
+
+.navbar-header > .navbar-brand:hover,
+.navbar-header > .navbar-brand:focus {
+    color: black;
+}
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+    font-size: 13px;
+    color: black;
+}
+
+.navbar-default .nav > li>a:hover,
+.navbar-default .nav>li>a:focus:hover {
+    color: white;
+    background-color: gray;
+}
+
+
+/*************************PARALLAX*************************
+.parallax { 
+    background-image: url("../asset/background1.jpg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+
+#wut { 
+    background-image: url("../asset/parallaxbg/d3%20darker.jpg");
+    height: 550px;
+	width: 80%; 
+	margin: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+	color: white;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+	font-size: 21px;
+	font-family: Ubuntu;
+}
+
+#keydomain { 
+    background-image: url("../asset/parallaxbg/d6%20darker2.jpg");
+    height: 550px;
+	width: 80%;
+	margin: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	color: white;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+	font-size: 21px;
+	font-family: Ubuntu;
+}
+
+#whatwedid { 
+    background-image: url("../asset/parallaxbg/d2%20darker.jpg");
+    height: 350px;
+	width: 80%;
+	margin: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	color: white;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+	font-size: 24px;
+	font-family: Ubuntu;
+}
+/*************************ZOOM*************************/
+.zoom {      
+-webkit-transition: all 0.35s ease-in-out;    
+-moz-transition: all 0.35s ease-in-out;    
+transition: all 0.35s ease-in-out;     
+cursor: -webkit-zoom-in;      
+cursor: -moz-zoom-in;      
+cursor: zoom-in;  
+}     
+
+.zoom:hover,  
+.zoom:active,   
+.zoom:focus {
+/**adjust scale to desired size, 
+add browser prefixes**/
+-ms-transform: scale(1.75);    
+-moz-transform: scale(1.75);  
+-webkit-transform: scale(1.75);  
+-o-transform: scale(1.75);  
+transform: scale(1.75);    
+position:relative;
+margin-bottom: 60px;
+z-index:100;  
+}
+/*************************Content CSS*************************/
+#one{
+	background-color: white;
+	color: black;
+	font-size: 17px;}
+
+#keydomain ul li{
+	font-size: 25px;
+}
+
+#working{
+	position: absolute;
+	margin: 110px 0 0 75%;
+	width: 300px;}
+
+#whatwedid div{
+    position: relative;
+    padding: 2% 0 0 0;}
+
+#homepg{
+    background-color: white;}
+
+#working a{
+    color:lightcoral;}
+#working a:active, #working a:hover{
+    color:red; 
+    text-decoration: none;}
+
+#researchplan { 
+	color: black;
+	font-size: 18px;
+	font-family: Architects Daughter , cursive;
+}
+
+#researchimg{
+	width: 850px;
+}
+#researchimg:hover{
+	width: 850px;
+	cursor: hand;
+}
+
+#researchimgmodal img{
+	width: 1300px;
+}
+
+#singpasssubmit{
+	width: auto;
+	min-width: 100px;
+	padding: 6.8px 17px 6.8px 17px;
+	color: #FFF;
+	background:#ee0000;
+	border: 1px solid #d7d7d7;
+	font-size: 17px;
+	line-height: 17px;
+	vertical-align: middle;}
+#singpasssubmit:hover{
+	color: black;
+	background:#d7d7d7;
+}
+
+#selectedhoscli{
+    font-family: ubuntu;
+    padding: 20px 0 0 0;
+}
+
+#ab111 option{
+    background-color: lightgray;
+}
+
+.datebtn{
+	margin: 17px 0px 0px 0px;
+}
+
+.btnhp{
+	color:black;
+	border-color: black;
+	background-color: white;
+	padding: 7px 14px 7px 14px;}
+.btnhp:hover{
+	color:white;
+	border-color: transparent;
+	background-color: gray;
+	padding: 7px 14px 7px 14px;}
+.btn-primary{
+    color: black;
+    border-color: black;
+    background-color: white;}
+.btn-primary:hover{
+    color: white;
+    border-color: white;
+    background-color: gray;}
+.left15{
+	padding:0px 0px 0px 0px !important;
+}
+.acme{
+    font-family: acme;
+}
+.ubuntu{
+    font-family: ubuntu;
+}
+.padmargin button{
+	width: 50px;
+	height: 50px;
+	padding: 5px 10px 5px 10px;
+	margin: 4px;
+}
+.wbg{
+    background-color: white !important;
+}

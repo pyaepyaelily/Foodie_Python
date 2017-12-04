@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+		body {
+	background-color:lightgreen
+}
+</style>
+ 
+
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="../css/component.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/modernizr.custom.js"></script>
+	
+	<title>filter</title>
+</head>
+
+<body>
+
+ <div class="row">
+    <div class="col-sm-12">
+      <img class="logo" src="../image/logo.png" width="100px" height="80px">
+
+       <form action="" class="search-form">
+                <div class="form-group has-feedback">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                  <span class="glyphicon glyphicon-search"></span>
+              </div>
+          </form>
+    </div>
+</div>
+<nav class="cl-effect-1">
+  <ul class="nav justify-content-center">
+    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Healthy Living</a>
+        <div class="dropdown-content">
+          <a href="healthy.html">Tips</a>
+          <a href="test.html">Health Test</a>
+        </div>
+      </li>
+    <li class="nav-item"><a class="nav-link" href="filter.html">Find Food</a></li>
+    <li class="nav-item"><a class="nav-link" href="addReview.html">Add Restaurant</a></li>
+    <li class="nav-item"><a class="nav-link" href="http://localhost:3000/">Chat Room</a></li>
+    
+
+  </ul>
+</nav>
+
+
+<div class="row" id="container">
+    <div class="col-sm-2" style="background-color:lavender;"></div>
+    <div class="col-sm-8" style="background-color:lavenderblush;">
+		  	<div class="carousel-inner" style=" width:100%; height: 900px !important;">
+			   <select class="form-control" style="width:50%; float:left;">
+				<option value="selected">Food Type</option>
+				<option value="all">Vegetarian</option>
+				<option value="all">Halal</option>
+		</select>
+
+
+		<select  class="form-control" style="width:50%; float:right; margin-right:60% margin-top:0px"> 
+				<option value="selected">Location</option>
+				<option value="all">North</option>
+				<option value="">South</option>
+				<option value="">East</option>
+				<option value="">West</option>
+		</select>
+
+<div id="slidecontainer">
+<input type="range" min="1" max="150" value="75" class="slider" id="myRange" style="width:100%;">
+<center>Price Range: $ <span id="demo"></span></center>
+</div>
+
+
+ <button type="button" onclick="show()" style="float:right">Search</button>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+function show(){
+document.getElementById("result").style.display = "block"
+
+
+}
+</script>
+<a href="addReview.html" style="position: absolute; bottom: 0;">Click here to add a restaurant!</a>
+<div>
+<br>
+<br>
+<br>
+  
+ 
+<div id="result" style="display:none">
+
+<div class="row">
+    <div class="col-sm-2" style="margin:15px;border:15px;">Sort by Price<img src="https://image.flaticon.com/icons/png/512/37/37808.png" style="height:20px;width:20px;"></div>
+    <div class="col-sm-3" style="margin:15px;border:15px;">Sort by Alphabetical Order<img src="https://image.flaticon.com/icons/png/512/37/37808.png" style="height:20px;width:20px;"></div>
+    <div class="col-sm-3" style="margin:15px;border:15px;">Sort by Popularity<img src="https://image.flaticon.com/icons/png/512/37/37808.png" style="height:20px;width:20px;"></div>
+</div>
+  <table style="clear: left;">
+  <div>
+  <tr><a href="review.html" style="font-size:160%;margin:15px;border:15px;">Happy Fam</a></tr>
+  <td><img src="https://static.pexels.com/photos/70497/pexels-photo-70497.jpeg" style="width:120px;height:120px;margin:15px;border:15px;"></td>
+  </div>
+  <td style="align:right;margin-top:-160px;margin-left:150px;">A great place to dine with anyone, be it your friends, family, or even your soulmate!</td>
+  <tr style="display: block;Margin-left:auto;Margin-right:auto;"><img src="http://www.clker.com/cliparts/v/L/7/d/9/m/3-5-star-rating-black-hi.png" style="height:20px;width:100px;"></tr>
+  <tr style="display:block;">~$12</tr>
+  </table>
+  
+  <table style="clear:left;">
+  <div>
+  <tr><a href="review.html" style="font-size:160%;margin:15px;border:15px;align:center;">Macnoodle</a></tr>
+  <td><img src="http://thewoksoflife.com/wp-content/uploads/2016/02/beef-noodle-soup-13.jpg" style="width:120px;height:120px;margin:15px;border:15px;"></td>
+  </div>
+  <td style="align:right;margin-top:-160px;margin-left:150px;">Best noodle in town, get it now and no regrets! </td>
+  <tr style="display: block;Margin-left:auto;Margin-right:auto;"><img src="http://www.clker.com/cliparts/v/L/7/d/9/m/3-5-star-rating-black-hi.png" style="height:20px;width:100px;"></tr>
+  <tr style="display:block;">~$8</tr>
+  </table>
+  
+  <table style="clear:left;">
+  <div>
+  <tr><a href="review.html" style="font-size:160%;margin:15px;border:15px;">Jagarikoese</a></tr>
+  <td><img src="https://lh5.ggpht.com/9UDY3O4wSwlBm-kHHfjKf85Yk5GCt0nckL5ZdMR-nYotAfNjODvR4sZ-scPXG3ABVF65=w300" style="width:120px;height:120px;margin:15px;border:15px;"></td>
+  </div>
+  <td style="align:right;margin-top:-160px;margin-left:150px;">100% natural potatoes, fresh out from the oven! </td>
+  <tr style="display: block;Margin-left:auto;Margin-right:auto;"><img src="http://www.clker.com/cliparts/v/L/7/d/9/m/3-5-star-rating-black-hi.png" style="height:20px;width:100px;"></tr>
+  <tr style="display:block;">~$5</tr>
+  </table>
+
+</div>
+
+
+</div>
+</div>
+
+			
+		</div>
+	<div class="col-sm-2" style="background-color:lavender;"></div>
+</div>
+ <div class="col-sm-2" style="background-color:lavender;"></div>
+
+
+
+<footer id="myFooter">
+
+    <div class="row">
+        <div class="col-sm-6 myCols">
+            <h5>Get started</h5>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">About our Website</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+            
+        
+        <div class="col-sm-6 myCols">
+            <h5>Legal</h5>
+            <ul>
+                <li><a href="../html/TermOfService.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    
+    </div>	
+	</footer>
+</body>
+</html>
+

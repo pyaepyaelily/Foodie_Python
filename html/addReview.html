@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Review entry</title>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="../css/component.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/modernizr.custom.js"></script>
+	
+	<style>
+	body {
+	background-color:lightgreen;
+	}
+	</style>
+</head>
+
+<body>
+
+
+<div class="row">
+    <div class="col-sm-12">
+    	<img class="logo" src="../image/logo.png" width="100px" height="80px">
+
+    	 <form action="" class="search-form">
+                <div class="form-group has-feedback">
+            		<label for="search" class="sr-only">Search</label>
+            		<input type="text" class="form-control" name="search" id="search" placeholder="search">
+              		<span class="glyphicon glyphicon-search"></span>
+            	</div>
+          </form>
+    </div>
+</div>
+<nav class="cl-effect-1">
+	<ul class="nav justify-content-center">
+		<li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+		<li class="dropdown">
+		    <a href="javascript:void(0)" class="dropbtn">Healthy Living</a>
+		    <div class="dropdown-content">
+		      <a href="healthy.html">Tips</a>
+		      <a href="test.html">Health Test</a>
+		    </div>
+		  </li>
+		<li class="nav-item"><a class="nav-link" href="filter.html">Find Food</a></li>
+		<li class="nav-item"><a class="nav-link" href="addReview.html">Add Restaurant</a></li>
+		<li class="nav-item"><a class="nav-link" href="http://localhost:3000/">Chat Room</a></li>
+		
+
+	</ul>
+</nav>
+
+<form>
+<fieldset>
+<legend>Add a Restaurant</legend>
+Enter Restaurant Name:<br>
+<input type="text" name="restName"><br><br>
+<select> 
+				<option value="selected">Rate the Restaurant</option>
+				<option value="all">Very Good</option>
+				<option value="">Good</option>
+				<option value="">Bad</option>
+				<option value="">Very bad</option>
+		</select>
+<br><br>
+Price range:<br>
+<input type="text" name="priceRange"><br><br>
+
+<select>
+	<option value="selected">Food Type</option>
+	<option value="all">Vegetarian</option>
+	<option value="all">Halal</option>
+</select><br><br>
+
+Opening Hours:<br>
+<input type="text" name="hours"><br><br>
+
+Location:<br>
+<input type="text" name="location"><br><br>
+
+<div>
+<textarea style="display:inline-block;" rows="4" cols="50" name="comment" form="usrform">Enter your review here...</textarea>
+ <input type="submit">
+</div>
+
+
+</fieldset>
+</form>
+
+
+<footer id="myFooter">
+
+    <div class="row">
+        <div class="col-sm-6 myCols">
+            <h5>Get started</h5>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">About our Website</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+            
+        
+        <div class="col-sm-6 myCols">
+            <h5>Legal</h5>
+            <ul>
+                <li><a href="../html/TermOfService.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    
+    </div>	
+	</footer>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="../css/component.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/modernizr.custom.js"></script>
+<style>
+body {
+	background-color:lightGreen;
+	}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+</style>
+<title>Page Title</title>
+</head>
+
+
+
+<body>
+
+ <div class="row">
+    <div class="col-sm-12">
+        <img class="logo" src="../image/logo.png" width="100px" height="80px">
+
+         <form action="" class="search-form">
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>
+          </form>
+    </div>
+</div>
+<nav class="cl-effect-1">
+    <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Healthy Living</a>
+            <div class="dropdown-content">
+              <a href="healthy.html">Tips</a>
+              <a href="test.html">Health Test</a>
+            </div>
+          </li>
+        <li class="nav-item"><a class="nav-link" href="filter.html">Find Food</a></li>
+        <li class="nav-item"><a class="nav-link" href="addReview.html">Add Restaurant</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://localhost:3000/">Chat Room</a></li>
+        
+
+    </ul>
+</nav>
+
+
+<h3>Your health status is:</h3> <h2>Very poor! </h2> <h3>You can take a look at some of our tips on staying healthy!</h3>
+<br>
+<br>
+<br>
+<br>
+<div width="600px" style="border-top:solid;border-bottom:solid;">
+<h2 style="padding-left:50px">Click on the picture to know more!</h2>
+</div>
+<br>
+<br>
+
+
+
+<div width="100%" style="margin-bottom:100px">
+
+<div class="row">
+<div class="col-md-4" style="max-width:250px;margin-left:50px;">
+<img src="../image/fruits.jpg" id="pic1" height="250px" width="250px">
+<h4 style="text-align:center;">Eating lots of Fruits</h2>
+
+</div>
+
+<div class="col-md-4" style="max-width:250px;margin-left:100px;">
+<img src="../image/exercise.jpg" id="pic2" height="250px" width="250px">
+<h4 style="text-align:center;">Exercise often</h2>
+
+</div>
+<div class="col-md-4" style="max-width:250px;margin-left:100px;">
+<img src="../image/sleep.jpg" id="pic3" height="250px" width="250px">
+<h4 style="text-align:center;">Have enough Sleep</h2>
+
+</div>
+</div>
+
+
+
+</div>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Fruits</h2>
+    </div>
+    <div class="modal-body">
+		<img src="../image/fruits.jpg" >
+		<p>The nutrients in fruit are vital for health and maintenance of your body. The potassium in fruit can reduce your risk of heart disease and stroke. Potassium may also reduce the risk of developing kidney stones and help to decrease bone loss as you age.</p>
+    </div>
+    <div class="modal-footer">
+      <h3></h3>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var pic1 = document.getElementById("pic1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+pic1.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+<footer id="myFooter">
+
+    <div class="row">
+        <div class="col-sm-6 myCols">
+            <h5>Get started</h5>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">About our Website</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+            
+        
+        <div class="col-sm-6 myCols">
+            <h5>Legal</h5>
+            <ul>
+                <li><a href="../html/TermOfService.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    
+    </div>	
+	</footer>
+
+
+
+
+
+
+</body>
+</html>

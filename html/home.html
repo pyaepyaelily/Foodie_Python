@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="../css/component.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+
+
+<body>
+
+ <div class="row">
+    <div class="col-sm-12">
+    	<img class="logo" src="../image/logo.png" width="100px" height="80px">
+
+    	 <form action="" class="search-form">
+                <div class="form-group has-feedback">
+            		<label for="search" class="sr-only">Search</label>
+            		<input type="text" class="form-control" name="search" id="search" placeholder="search">
+              		<span class="glyphicon glyphicon-search"></span>
+            	</div>
+          </form>
+    </div>
+</div>
+<nav class="cl-effect-1">
+	<ul class="nav justify-content-center">
+		<li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+		<li class="dropdown">
+		    <a href="javascript:void(0)" class="dropbtn">Healthy Living</a>
+		    <div class="dropdown-content">
+		      <a href="healthy.html">Tips</a>
+		      <a href="test.html">Health Test</a>
+		    </div>
+		  </li>
+		<li class="nav-item"><a class="nav-link" href="filter.html">Find Food</a></li>
+		<li class="nav-item"><a class="nav-link" href="addReview.html">Add Restaurant</a></li>
+		<li class="nav-item"><a class="nav-link" href="http://localhost:3000/">Chat Room</a></li>
+		
+
+	</ul>
+</nav>
+
+
+<div class="row">
+    <!-- <div class="col-sm-2" ></div> -->
+    <div class="col-sm-12" >
+	    <div  id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		 	<ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+		 	</ol>
+		  	<div class="carousel-inner" style=" width:100%; height: 400px !important;">
+			    <div class="carousel-item active">
+			    	<img class="d-block w-100" src="../image/foodpromo.jpg" align="middle" alt="First slide" style="width:400px;height:500px;" >
+			     	<!-- <div class="carousel-caption">
+          				<p>Click here to find out more</p>
+        			</div> -->
+			    </div>
+			    <div class="carousel-item"><img class="d-block w-100" src="../image/foodpromo1.jpg" alt="Second slide" style="width:270px;height:400px;"></div>
+			    <div class="carousel-item"><img class="d-block w-100" src="../image/foodpromo2.png" alt="Third slide" style="width:230px;height:400px;"></div>
+			    <div class="carousel-item"><img class="d-block w-100" src="../image/foodpromo3.jpg" alt="Forth slide" style="width:220px;height:400px;"></div>
+		  	</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only" style="color:red;" >Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<h1 style="fontSize:1.5em;fontStyle:italic;textAlign:center;margin-top:100px;">About our Website</h1>
+		<p align="justify">Our website's purpose is to allow users to look for desired type of food like, halal or vegetarian. We have functions like the food filter which helps to filter the choices that the user wants.
+		It makes it easier for them to find what they want with the restaurant finder and also, the users can find out honest reviews about the restaurants given by former customers of the restaurants.
+		The bmi calculator helps users who are concerned about their fitness to check their bmi and the healthy bmi range. We also have a chatroom which users can use to chat with each other and find out opinions about food. </p>
+    </div>
+   <!--  <div class="col-sm-2" ></div> -->
+</div>
+
+
+
+<footer id="myFooter">
+
+    <div class="row">
+        <div class="col-sm-6 myCols">
+            <h5>Get started</h5>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">About our Website</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+            
+        
+        <div class="col-sm-6 myCols">
+            <h5>Legal</h5>
+            <ul>
+                <li><a href="../html/TermOfService.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    
+    </div>	
+	</footer>
+
+</body>
+</html>
+
