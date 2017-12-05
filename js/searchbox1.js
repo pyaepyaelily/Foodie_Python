@@ -1,41 +1,29 @@
 ﻿$(document).ready(function () {
     var contacts = [
     {
-        "Name": "World Gourmet Summit 2017",
+        "Name": "Hainanase Chicken Rice",
         "url": "../Events/gourmetsummitinfo.html"
     },{
-        "Name": "Singapore Food Festival 2017",
+        "Name": "Chilli Crab",
         "url": "../Events/sgfoodfestivalinfo.html"
     },{
-        "Name": "International Champions Cup 2017",
+        "Name": "Laksa",
         "url": "../Events/championscup.html"
     },{
-        "Name": "Singapore Night Festival",
+        "Name": "Satay",
         "url": "../Events/sgnight.html"
     },{
-        "Name": "Singapore International Festival of Arts 2017 ",
+        "Name": "Char Kway Teow ",
         "url": "../Events/sifa.html"
     },{
-        "Name": "Grand Prix Season Singapore",
+        "Name": "Nasi Lemak",
         "url": "../Events/gps.html"
     },{
-        "Name": "Christmas Wonderland",
+        "Name": "Roti Prata",
         "url": "../Events/cw.html"
     },{
-        "Name": "ZoukOut",
+        "Name": "Wonton Noodles",
         "url": "../Events/zoukoutinfo.html"
-    },{
-        "Name": "Singapore Art Week",
-        "url": "../Events/sgaw.html"
-    },{
-        "Name": "The Great Singapore Sale",
-        "url": "../Events/sgs.html"
-    },{
-        "Name": "Yayoi Kusama Exhibition",
-        "url": "../Events/yke.html"
-    },{
-        "Name": "CIRQUE DU SOLEIL KOOZA",
-        "url": "../Events/KOOZA.html"
     }
     ];
     
