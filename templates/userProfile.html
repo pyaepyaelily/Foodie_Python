@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% from "includes/_formhelper.html" import render_field %}
+<br>
+<br>
+<div id="profilediv">
+    <h1 id="profile">Your Profile!</h1>
+    <a href="/userEdit">Edit profile</a>
+    <div class="row">
+        <div class="col-md-4">
+            <p>Username</p>
+        </div>
+        <div class="col-md-8">
+            <p>{{ user['Username'] }}</p>
+        </div>
+        <div class="col-md-4">
+            <p>Preferred price range</p>
+        </div>
+        <div class="col-md-8">
+            <p>{{ user['Price'] }}</p>
+        </div>
+        <div class="col-md-4">
+            <p>Preferred food type</p>
+        </div>
+        <div class="col-md-8">
+            <p>{{ user['Food Types'] }}</p>
+        </div>
+        <div class="col-md-4">
+            <p>Email</p>
+        </div>
+        <div class="col-md-8">
+            <p>{{ user['Email'] }}</p>
+        </div>
+
+    </div>
+</div>
+<style>
+     #profile{
+         font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid darkred;
+    margin-bottom:20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+    font-size:200%;
+
+    }
+
+     #profilediv {
+        max-width: 980px;
+        padding: 20px 12px 10px 20px;
+        font: 13px Arial, Helvetica, sans-serif;
+         align:center;
+
+
+    }
+#loginbtn{
+        /*border-radius: 4px;*/
+    background-color: darkred;
+    border: 0;
+    color: #fff!important;
+    display: inline-block;
+    font-size: 14px;
+    /*line-height: 40px;*/
+    /*min-width: 150px;*/
+    /*height: 42px;*/
+    text-align: center;
+        height: 42px;
+        width:250px
+
+    }
+
+</style>
+
+{% endblock %}

@@ -1,0 +1,278 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+        {% from "includes/_formhelper.html" import render_field %}
+<br>
+<br>
+
+
+<div id="viewdiv">
+
+    <h1 id="view">Details of {{ restDetail['Name'] }}
+    </h1>
+    <br/>
+</div>
+
+<div class="form-group col-md-8">
+</div>
+
+<div id="sort">
+  <div class="form-group col-md-12">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVoweWwEb_UQKtBhQfwA78S2QXub1JHoyCox-rj8B3gnOC9M5_aQ">
+{# <div class="form-group col-md-12" class="desc">#}
+        {{ restDetail['Description'] }}
+
+<form method=post>
+      <div class="form-group col-md-6" id="ratings">
+                     {{ render_field(form.ratings, class_="form-control") }}
+
+
+                </div>
+  </div>
+
+  </div>
+
+<div class="form-group col-md-6" class="value">
+      {{ restDetail['Price'] }}
+    <div class="form-group col-md-8" class="value">
+    P r i c e  R a n g e:  </div>
+</div>
+
+
+    <div class="form-group col-md-6" class="value">
+      {{ restDetail['Closing Hours'] }}
+    <div class="form-group col-md-8" class="value">
+        C l o s i n g  H o u r: </div>
+</div>
+
+
+<div class="form-group col-md-6" class="value">
+      {{ restDetail['Address'] }}
+    <div class="form-group col-md-8" class="value">
+        A d d r e s s: </div>
+</div>
+
+<div class="form-group col-md-6" class="value">
+      {{ restDetail['Opening Hours'] }}
+    <div class="form-group col-md-8" class="value">
+        O p e n i n g  H o u r: </div>
+</div>
+
+<div class="form-group col-md-6" class="value">
+      {{ restDetail['Location'] }}
+    <div class="form-group col-md-8" class="value">
+        L o c a t i o n: </div>
+</div>
+
+
+</div>
+
+
+   <style>
+    #viewdiv{
+{#         max-width: 980px;#}
+{#        padding: 20px 12px 10px 20px;#}
+{#        font: 13px Arial, Helvetica, sans-serif;#}
+{#         align:center;#}
+
+{#       display:block;#}
+{#    border: 0;#}
+{#    border-top: solid black;#}
+{#    border-top-color: darkred;#}
+{#    margin: 1em 0;#}
+{#    padding: 0;#}
+{#	float: none;#}
+{#	clear: left;#}
+{#	width:100%#}
+
+   max-width: 1480px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+        align:center;
+
+    }
+
+    #view{
+         color: #000;
+    font-family: "hgw-HelveticaNeueBold",Arial,sans-serif;
+	 font-weight: bold;
+    border-bottom: 2px solid darkred;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+    font-size:200%;
+
+{#         font-weight: bold;#}
+{#    font-style: italic;#}
+{#    border-bottom: 2px solid darkred;#}
+{#    margin-bottom:20px;#}
+{#    font-size: 15px;#}
+{#    padding-bottom: 3px;#}
+{#    font-size:200%;#}
+    }
+
+    img {
+        display: inline-block;
+        float: left;
+    }
+
+
+    .value {
+        font-size: 30px;
+{#        float:right;#}
+{#        display:inline-block;#}
+{#        text-align:right;#}
+        font-weight: bold;
+
+    }
+
+   #ratings{
+       display:block;
+       float:right;
+
+   }
+
+   #submitbtn{
+       /*border-radius: 4px;*/
+    background-color: darkred;
+    border: 0;
+    color: #fff!important;
+    display: inline-block;
+    font-size: 14px;
+    /*line-height: 40px;*/
+    /*min-width: 150px;*/
+    /*height: 42px;*/
+    text-align: center;
+        height: 42px;
+        width:250px;
+
+   }
+
+   th{
+       font-family: "hgw-HelveticaNeueBold",Arial,sans-serif;
+	 font-weight: bold;
+       font-size:18px;
+       color: darkred;
+       font-style:italic;
+
+   }
+
+   table img {
+       height:20px;
+       width:20px;
+
+   }
+
+   #commentdiv{
+        max-width: 980px;
+        padding: 20px 12px 10px 20px;
+        font: 13px Arial, Helvetica, sans-serif;
+         align:center;
+
+
+   }
+
+    #user {
+         color: #000;
+    font-family: "hgw-HelveticaNeueBold",Arial,sans-serif;
+	 font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 3px;
+    font-size:150%;
+
+
+
+    }
+
+    #puser{
+        color: #000;
+    font-family: "hgw-HelveticaNeueBold",Arial,sans-serif;
+	 font-weight: bold;
+    border-bottom: 2px solid darkred;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+    font-size:200%;
+        text-align:center;
+
+    }
+
+   #comment{
+        color: black;
+    font-family: "hgw-HelveticaNeueBold",Arial,sans-serif;
+	 font-weight: bold;
+    font-size: 13px;
+
+
+   }
+
+
+
+
+    </style>
+
+
+    <div class="form-group col-md-12">
+         {{ render_field(form.comments, class_="form-control") }}
+                </div>
+                    <div class="form-group col-md-12">
+                    <input type="submit" value="Submit" class="btn btn-info" id="submitbtn"/>
+                </div>
+
+</form>
+
+
+    <div class="form-group col-md-12">
+{#        <table class="table table-bordered">#}
+{#        <thead>#}
+{#        <br>#}
+{#        <br>#}
+{#        <tr>#}
+{#            <th>Users</th>#}
+{#            <th>Comments</th>#}
+{#            <th>Ratings</th>#}
+{#        </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for i in feedback %}#}
+{#            <tr>#}
+{##}
+{##}
+{#                    <td> {{ i['User'] }}</td>#}
+{#                    <td> {{ i['Comment'] }}</td>#}
+{#                    <td>#}
+{#                {% for i in range(i['Rating']) %}#}
+{#                    <img src="https://t3.ftcdn.net/jpg/01/09/84/42/160_F_109844239_A7MdQSDf4y1H80cfvHZuSa0zKBkZ68S7.jpg">#}
+{##}
+{#                {% endfor %}#}
+{#                    </td>#}
+{##}
+{##}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+    </div>
+        {% for i in feedback %}
+
+<div class="form-group col-md-8">
+    <p id="puser"> Past Comments</p>
+    </div>
+
+    <div class="form-group col-md-6">
+    <p id="user"> {{ i['User'] }}</p>
+     <div class="form-group col-md-12">
+    <p id="comment">Comment: {{ i['Comment'] }} </p>
+    </div>
+    </div>
+
+
+
+        {% endfor %}
+
+
+
+
+
+{#</div>#}
+{% endblock %}
